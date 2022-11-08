@@ -1,0 +1,79 @@
+ACONTa: cit_c <=> acon_C_c + h2o_c
+b0118
+b1276
+----------------
+
+ACONTb: acon_C_c + h2o_c <=> icit_c
+b0118
+b1276
+----------------
+
+BIOMASS_Ecoli_core_w_GAM: 1.496 3pg_c + 3.7478 accoa_c + 59.81 atp_c + 0.361 e4p_c + 0.0709 f6p_c + 0.129 g3p_c + 0.205 g6p_c + 0.2557 gln__L_c + 4.9414 glu__L_c + 59.81 h2o_c + 3.547 nad_c + 13.0279 nadph_c + 1.7867 oaa_c + 0.5191 pep_c + 2.8328 pyr_c + 0.8977 r5p_c --> 59.81 adp_c + 4.1182 akg_c + 3.7478 coa_c + 59.81 h_c + 3.547 nadh_c + 13.0279 nadp_c + 59.81 pi_c
+----------------
+
+CS: accoa_c + h2o_c + oaa_c --> cit_c + coa_c + h_c
+b0720
+----------------
+
+ENO: 2pg_c <=> h2o_c + pep_c
+b2779
+----------------
+
+EX_h_e: h_e <=> 
+----------------
+
+EX_nh4_e: nh4_e <=> 
+----------------
+
+EX_pi_e: pi_e <=> 
+----------------
+
+GAPD: g3p_c + nad_c + pi_c <=> 13dpg_c + h_c + nadh_c
+b1779
+----------------
+
+GLCpts: glc__D_e + pep_c --> g6p_c + pyr_c
+b1818
+b1101
+b1621
+b1817
+b2417
+b1819
+b2415
+b2416
+----------------
+
+GLNS: atp_c + glu__L_c + nh4_c --> adp_c + gln__L_c + h_c + pi_c
+b1297
+b3870
+----------------
+
+ICDHyr: icit_c + nadp_c <=> akg_c + co2_c + nadph_c
+b1136
+----------------
+
+NH4t: nh4_e <=> nh4_c
+b0451
+s0001
+----------------
+
+PGK: 3pg_c + atp_c <=> 13dpg_c + adp_c
+b2926
+----------------
+
+PGM: 2pg_c <=> 3pg_c
+b4395
+b0755
+b3612
+----------------
+
+PIt2r: h_e + pi_e <=> h_c + pi_c
+b3493
+b2987
+----------------
+
+RPI: r5p_c <=> ru5p__D_c
+b4090
+b2914
+----------------
+

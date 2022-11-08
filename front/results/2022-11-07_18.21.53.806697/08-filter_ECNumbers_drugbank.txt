@@ -1,0 +1,24 @@
+1.1.1.42;Isocitrate dehydrogenase [NADP];Azotobacter vinelandii;P16100;BE0001239
+1.1.1.42;Isocitrate dehydrogenase [NADP];Bacillus subtilis (strain 168);P39126;BE0001524
+1.1.1.42;Isocitrate dehydrogenase [NADP];Escherichia coli (strain K12);P08200;BE0001249
+1.1.1.42;Isocitrate dehydrogenase [NADP], mitochondrial;Humans;P48735;BE0004527
+1.1.1.42;Isocitrate dehydrogenase [NADP] cytoplasmic;Humans;O75874;BE0001251
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase;Plasmodium falciparum (isolate 3D7);Q8IKK7;BE0009171
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase, glycosomal;Trypanosoma cruzi;P22513;BE0001536
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase;Humans;P04406;BE0000542
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase;Geobacillus stearothermophilus;P00362;BE0002606
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase A;Escherichia coli (strain K12);P0A9B2;BE0002057
+1.2.1.12;Glyceraldehyde-3-phosphate dehydrogenase, testis-specific;Humans;O14556;BE0000720
+2.3.3.1;Citrate synthase, mitochondrial;Humans;O75390;BE0004459
+2.7.2.3;Bifunctional PGK/TIM;Thermotoga maritima (strain ATCC 43589 / MSB8 / DSM 3109 / JCM 10099);P36204;BE0001611
+2.7.2.3;Phosphoglycerate Kinases;Humans;P00558;BE0009688
+2.7.2.3;Phosphoglycerate kinase 1;Humans;P00558;BE0004454
+4.2.1.11;Enolase;Streptococcus salivarius;A0A1C7C740;BE0009704
+4.2.1.11;Enolase;Streptococcus sanguinis (strain SK36);A3CMA7;BE0009703
+4.2.1.11;Gamma-enolase;Humans;P09104;BE0004550
+4.2.1.11;Beta-enolase;Humans;P13929;BE0004460
+4.2.1.11;Enolase;Plasmodium falciparum (isolate 3D7);Q8IJN7;BE0009183
+4.2.1.11;Enolase;Streptococcus mutans;A0A448RWU9;BE0009701
+4.2.1.11;Enolase;Lactobacillus casei (strain BL23);B3WCW7;BE0009702
+4.2.1.11;Alpha-enolase;Humans;P06733;BE0005807
+4.2.1.11;Excretory Secretory (ES) proteins;Fasciola hepatica;Q6IX08;BE0009630

@@ -1,0 +1,22 @@
+1. Gene b0720 inibido.
+CS : accoa_c + h2o_c + oaa_c --> cit_c + coa_c + h_c
+
+2. Gene b2779 inibido.
+ENO : 2pg_c --> h2o_c + pep_c
+
+3. Gene b2416 inibido.
+GLCpts : glc__D_e + pep_c --> g6p_c + pyr_cFRUpts2 : fru_e + pep_c --> f6p_c + pyr_c
+
+4. Gene b2415 inibido.
+GLCpts : glc__D_e + pep_c --> g6p_c + pyr_cFRUpts2 : fru_e + pep_c --> f6p_c + pyr_c
+
+5. Gene b1779 inibido.
+GAPD : g3p_c + nad_c + pi_c --> 13dpg_c + h_c + nadh_c
+
+6. Gene b1136 inibido.
+ICDHyr : icit_c + nadp_c --> akg_c + co2_c + nadph_c
+
+7. Gene b2926 inibido.
+PGK : 3pg_c + atp_c --> 13dpg_c + adp_c
+
+Total de genes inibidos que interrompem a geracao de biomassa = 7

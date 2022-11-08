@@ -1,0 +1,29 @@
+*** INICIO DA EXECUCAO *** 
+Modelo/Organismo/Nome/Email/Metodo = e_coli_core, Escherichia coli, THIAGO G RAMOS, gianninimail@gmail.com, 1
+
+
+INICIO DO ITEM 1
+GRAVOU ARQUIVO COM OS DADOS DE GENE/REACAO DA REDE
+GEROU FBA 
+FBA = <Solution 0.874 at 0x7ffadad7f370>
+INICIO DO ITEM 2
+GEROU FVA 
+INICIO DA VERIFICACAO ENTRE FBA/FVA 
+Lista de reacoes a analisar = 47
+GENERATED FILE 01-fva.csv
+GENERATED FILE /home/thiago/projetos/fiocruz/findtargetweb_20/front/results/2022-11-07_18.21.53.806697//02-reacoesFVADifZero.txt
+INICIO DO ITEM 3
+len(listReactPerturb) = 47
+Total de reacoes cujo FBA zerou = 17
+INICIO DA BIFURCACAO
+if len(model.genes) = True
+INICIO DO ITEM 4
+INICIO DO ITEM 5
+INICIO DO ITEM 6
+list_acron_kegg = ['eco', 'ecj', 'ecd', 'ebw', 'ecok', 'ece', 'ecs', 'ecf', 'etw', 'elx', 'eoi', 'eoj', 'eoh', 'ecoo', 'ecoh', 'esl', 'eso', 'esm', 'eck', 'ecg', 'eok', 'elr', 'elh', 'ecw', 'eun', 'ecp', 'ena', 'ecos', 'ecv', 'ecoa', 'ecx', 'ecm', 'ecy', 'ecr', 'ecq', 'eum', 'ect', 'eoc', 'ebr', 'ebl', 'ebe', 'ebd', 'eci', 'eih', 'ecz', 'ecc', 'elo', 'eln', 'ese', 'ecl', 'eko', 'ekf', 'eab', 'edh', 'edj', 'elu', 'elw', 'ell', 'elc', 'eld', 'elp', 'elf', 'ecol', 'ecoi', 'ecoj']
+len my_list_genes = 7
+INICIO DO ITEM 7
+INICIO DO ITEM 8
+INICIO DO ITEM 9
+INICIO DO ITEM 10
+ACABOU!!! SEJA FELIZ!!!

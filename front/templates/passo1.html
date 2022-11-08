@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div class="container">
+		<form id="contact" action="{% url 'passo1' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h3>FindTargetsWeb v2.0</h3>
+			<h4>Result of execution!</h4>
+			<fieldset>{{name}}</fieldset>
+			<fieldset>{{email}}</fieldset>
+			<fieldset>Organism selected: {{organism}}</fieldset>
+			<fieldset>FBA Result: {{valInitialSolutionFmt}} mmol/g DW/h</fieldset>
+			<fieldset>{{form.method}}</fieldset>
+			<fieldset>{{message}}</fieldset>
+			<fieldset>
+				<button name="button" type="button" id="contact-button" onclick="window.history.back();">BACK</button>
+				<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+			</fieldset>
+		</form>
+	</div>
+{% endblock %}

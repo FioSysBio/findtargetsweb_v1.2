@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FindTargetsWEB</title> 
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
+
+</head>
+
+<body>
+	<div class="container">
+		<form id="contact" action="{% url 'FindTargetsWEB:passo1' %}" method="post" enctype="multipart/form-data"> 
+			{% csrf_token %}
+			<h3>FindTargetsWeb</h3>
+			<h4>Result of execution!</h4>
+			<fieldset>{{name}}</fieldset>
+			<fieldset>{{email}}</fieldset>
+			<fieldset>Organism selected: {{organism}}</fieldset>
+			<fieldset>FBA Result: {{valInitialSolutionFmt}} mmol/g DW/h</fieldset>
+			<fieldset>{{form.method}}</fieldset>
+			<fieldset>{{message}}</fieldset>
+			<fieldset>
+				<button name="button" type="button" id="contact-button" onclick="window.history.back();">BACK</button>
+				<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">SUBMIT</button>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Escherichia coli,Escherichia coli
+Haemophilus influenzae,Haemophilus influenzae
+Klebsiella pneumoniae,Klebsiella pneumoniae
+Mycoplasma genitalium,Mycoplasma genitalium
+Pseudomonas aeruginosa,Pseudomonas aeruginosa
+Salmonella typhimurium,Salmonella typhimurium
+Mycobacterium tuberculosis,Mycobacterium tuberculosis
+Pseudomonas putida,Pseudomonas putida
+Staphylococcus aureus,Staphylococcus aureus
+Acinetobacter baumannii,Acinetobacter baumannii
+Streptococcus mutans,Streptococcus mutans
+Serratia,Serratia

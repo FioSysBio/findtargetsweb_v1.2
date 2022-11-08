@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div class="container">
+		<form id="contact" action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h3>FindTargetsWeb v2.0</h3>
+			<h4>Execute your model and receive the results in your email</h4>
+			<fieldset>{{form.name}}</fieldset>
+			<fieldset>{{form.email}}</fieldset>
+			<fieldset>{{form.organism}}</fieldset>
+			<fieldset>{{form.file}}</fieldset>
+			<fieldset>
+				<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+			</fieldset>
+			<a href="{% url 'download' %}">USER MANUAL</a>
+		</form>
+	</div>
+{% endblock %}
