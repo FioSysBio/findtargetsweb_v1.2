@@ -998,6 +998,7 @@ class FindTargets:
         msg.attach(part)
          
         # Enviando o email (USANDO O SMTP DO HOTMAIL PARA ENVIAR)
+        # server = smtplib.SMTP("smtp.live.com: 587")
         server = smtplib.SMTP("smtp.gmail.com: 587")
         server.starttls()
         server.login(remetente,senha)
@@ -1037,6 +1038,7 @@ class FindTargets:
         msg.attach(MIMEText(mensagem.decode("UTF-8"), 'plain'))
 
         # Enviando o email (USANDO O SMTP DO GMAIL PARA ENVIAR)
+        #server = smtplib.SMTP("smtp.live.com: 587")
         server = smtplib.SMTP("smtp.gmail.com: 587")
         server.starttls()
         server.login(remetente, senha)
