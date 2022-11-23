@@ -48,7 +48,8 @@ class MyThread(threading.Thread):
         
     def run(self):
         print("A THREAD COMECOU!!!!!!!!")
-        FindTargets().mainMethod(self.model, self.organism, self.name, self.email, self.method)
+        FindTargets.sendMailTest(self);
+        # FindTargets().mainMethod(self.model, self.organism, self.name, self.email, self.method)
 
 class FindTargets:
 
@@ -75,7 +76,6 @@ class FindTargets:
         return tuple(my_list_aux)
 
     # METODO PARA MONTAR O OBJETO COBRA PARA TRAFEGO NA APLICACAO!
-
     def readModel(self, sbmlfile):
         # try:
         model = cobra.io.read_sbml_model(sbmlfile)
@@ -88,7 +88,6 @@ class FindTargets:
         # return cobra.io.sbml3.read_sbml_model(sbmlfile)
 
     # MODEL VALIDATION METHOD TO CONTINUE OUR EXECUTION
-
     def validateModel(self, model):
         return_dict_val_model = {}
 
@@ -115,7 +114,6 @@ class FindTargets:
     #
     # MAIN METHOD THAT REALIZE ANALYSIS OF SELECTED NETWORK SBML FILE
     #
-
     def mainMethod(self, model, organismParam, name, email, method):
 
         numCasasDec = 6
@@ -909,7 +907,6 @@ class FindTargets:
         fileLog.close()
 
     # GENERATE ZIP FILE TO SEND MAIL TO USER
-
     def zipReportsToSendMail(self, dir_path, dataHoraAtualFmt, directory):
         zf = ZipFile(dir_path+"/results/"+dataHoraAtualFmt+'_results.zip', "w")
         for root, subdirs, files in os.walk(directory):
@@ -921,9 +918,7 @@ class FindTargets:
 
         return zf
 
-
     # SEND MAIL WITH RESULTS
-
     def sendMailWithReportAttached(self, name, email, zip_file_report, nameFile, method):
         methodSelected = ""
         if method == "1":
@@ -956,10 +951,11 @@ class FindTargets:
                    "FILE WITH A SUMMARY OF DATA FOUND IN 08, 11 AND 13 XLS FILES.\n\n" \
 
         # remetente    = 'findtargetsweb_fiocruz@hotmail.com'
-        remetente = 'findtargetsweb@gmail.com'
+        remetente = 'findtargetweb@gmail.com'
         # senha        = 'proccfiocruz1234'
-        senha = 'whzctyqjvqsxojcz'
-         
+        # senha = 'whzctyqjvqsxojcz'
+        senha = 'ntucaeevfacubqyj'
+
         # Informacoes da mensagem
         destinatario = email
         assunto      = 'REPORT THERAPEUTICS TARGETS FROM YOUR NETWORK MODEL'
@@ -1008,15 +1004,15 @@ class FindTargets:
 
 
     # SEND MAIL WITH ERRORS!
-
     def sendMailWithError(self, name, email, dsc_exception):
         mensagem = "ERROR! PLEASE CONTACT ADMINISTRATOR OR TRY AGAIN\n\n"
         mensagem = mensagem + dsc_exception
 
         # remetente    = 'findtargetsweb_fiocruz@hotmail.com'
-        remetente    = 'findtargetsweb@gmail.com'
+        remetente    = 'findtargetweb@gmail.com'
         # senha        = 'proccfiocruz1234'
-        senha        = 'whzctyqjvqsxojcz'
+        # senha        = 'whzctyqjvqsxojcz'
+        senha = 'ntucaeevfacubqyj'
 
         # Informacoes da mensagem
         destinatario = email
@@ -1049,7 +1045,6 @@ class FindTargets:
 
     # METODO QUE ARMAZENA EM PLANILHA OS DADOS DE GENE E REACAO DE UM MODELO AVALIADO
     # @PARAMS => model = modelo | nomeArquivoModelo = nome do arquivo sbml
-    
     def reportModel(self, model, nomeArquivoModelo):
         workbook_dados_modelo = xlwt.Workbook()
         sheet_genes = workbook_dados_modelo.add_sheet("GENES")
@@ -1091,7 +1086,6 @@ class FindTargets:
     
     
     # METHOD TO GET EC NUMBER FROM SBML WITHOUT GENES MAPPED
-    
     def alternativeStepToGetECNumberWithoutGenes(self, directory):
         with open(directory+"//react_biomass_zero_sbml_no_genes.txt", "r") as infile:
             data = infile.read()
@@ -1348,3 +1342,91 @@ class FindTargets:
         file_ecs_compound.close()
         file_comp_not_found_from_product_sbml.close()
         file_reaction_not_found_from_product_sbml.close()
+
+    # METHOD TO TEST EMAIL
+    def sendMailTest(self):
+
+        email = 'gianninimail@gmail.com'
+        method = '0'
+        nameFile = ""
+        if method == "1":
+            methodSelected = "FBA+FVA"
+        else:
+            methodSelected = "Only FBA"
+
+        if nameFile == "":
+            nameFile = "NAME NOT FOUND"
+
+        mensagem = "FINAL REPORT - FIND TARGETS WEB \n\n\n" \
+                   "" \
+                   "FILE: " + str(nameFile) + " | METHOD: " + str(methodSelected) + "\n" \
+                                                                                    "" \
+                                                                                    "YOUR ANALYSIS HAS FINISHED SUCESSFULLY. THE FOLLOWING FILES HAVE BEEN GENERATED:\n" \
+                                                                                    "" \
+                                                                                    "08-filter_ECNumbers_drugbank.xls\n" \
+                                                                                    "FIELDS: EC NUMBER, PRODUCT, ORGANISM NAME, UNIPROTID, DRUGBANKID\n\n" \
+                                                                                    "" \
+                                                                                    "11-hits_Uniprot.xls\n" \
+                                                                                    "FIELDS: UNIPROTID, HIT_UNIPROTID, PERCENT_IDENT_BLAST, EVALUE, GENE_NAME, PATHWAY, FUNCTION, CATALYTIC ACTIVITY, LOCALIZATION, ID PDB\n\n" \
+                                                                                    "" \
+                                                                                    "13-list_inhibitors_per_target.xls AND 14-list_inhibitors_approved.xls\n" \
+                                                                                    "FIELDS: UNIPROTID	DRUGBANKID	DRUGBANKDRUGID	DRUGNAME	DRUGGROUP	PHARMAACTION	ACTIONS\n\n" \
+                                                                                    "" \
+                                                                                    "model_data.xls\n" \
+                                                                                    "ALL GENES, REACTIONS AND METABOLITES IN THE SBML FILE USED IN ANALYSIS\n\n" \
+                                                                                    "" \
+                                                                                    "summary_results.xls\n" \
+                                                                                    "FILE WITH A SUMMARY OF DATA FOUND IN 08, 11 AND 13 XLS FILES.\n\n" \
+ \
+            # remetente    = 'findtargetsweb_fiocruz@hotmail.com'
+        remetente = 'findtargetweb@gmail.com'
+        # senha        = 'proccfiocruz1234'
+        # senha = 'whzctyqjvqsxojcz'
+        # senha = 'pjcgoufuudsazwgq'
+        senha = 'ntucaeevfacubqyj'
+
+        # Informacoes da mensagem
+        destinatario = email
+        assunto = 'REPORT THERAPEUTICS TARGETS FROM YOUR NETWORK MODEL'
+
+        msg = MIMEMultipart()
+
+        msg['From'] = remetente
+        msg['To'] = destinatario
+        msg['Subject'] = assunto
+
+        # Preparando a mensagem
+        '''
+        mensagem = '\r\n'.join([
+          'From: %s' % remetente,
+          'To: %s' % destinatario,
+          'Subject: %s' % assunto,
+          '',
+          '%s' % mensagem
+          ])
+        '''
+        mensagem = '\r\n'.join([
+            '%s' % mensagem
+        ])
+
+        mensagem = mensagem.encode("UTF-8")
+
+        msg.attach(MIMEText(mensagem.decode("UTF-8"), 'plain'))
+
+        # filename = zip_file_report.filename
+        # attachment = open(filename, "rb")
+        #
+        # part = MIMEBase('application', 'zip')
+        # part.set_payload((attachment).read())
+        # encoders.encode_base64(part)
+        # part.add_header('Content-Disposition', "attachment", filename=os.path.basename(filename))
+        # msg.attach(part)
+
+        # Enviando o email (USANDO O SMTP DO HOTMAIL PARA ENVIAR)
+        # server = smtplib.SMTP("smtp.live.com: 587")
+        server = smtplib.SMTP("smtp.gmail.com: 587")
+        server.starttls()
+        server.login(remetente, senha)
+        text = msg.as_string()
+        server.sendmail(remetente, destinatario, text)
+        server.quit()
