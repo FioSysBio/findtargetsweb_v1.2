@@ -48,8 +48,8 @@ class MyThread(threading.Thread):
         
     def run(self):
         print("A THREAD COMECOU!!!!!!!!")
-        FindTargets.sendMailTest(self);
-        # FindTargets().mainMethod(self.model, self.organism, self.name, self.email, self.method)
+        # FindTargets.sendMailTest(self);
+        FindTargets().mainMethod(self.model, self.organism, self.name, self.email, self.method)
 
 class FindTargets:
 
