@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3)bpt6u^b05eu)$9=1ek5kk*qe9wf5w%e4sru6if9h)b1uv1b4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,8 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'findtargetsweb',
-        'USER': 'root',
-        'PASSWORD': 'Root@123',
+        # 'USER': 'root',
+        'USER': 'ccbh4851',
+        # 'PASSWORD': 'Root@123',
+        'PASSWORD': 'ccbh4851',
         'HOST': 'localhost',
     }
 }
