@@ -39,6 +39,17 @@ body {
   color: #006b1b;
 }
 
+.home {
+  max-width: 400px;
+  width: 100%;
+  /*margin: 90px auto;*/
+  margin: 90px auto 5px auto;
+  position: relative;
+  background-color: #F9F9F9;
+  text-align: center;
+  color: #006b1b;
+}
+
 fieldset {
   border: medium none !important;
   margin: 0 0 10px;
@@ -60,7 +71,7 @@ fieldset {
 #contact {
   background: #F9F9F9;
   padding: 25px;
-  margin: 90px 0 5px 0;
+  margin: 5px 0 5px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 

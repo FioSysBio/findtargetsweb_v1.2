@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 	<div class="container">
 		<form id="contact" action="{% url 'passo2' %}" method="post" enctype="multipart/form-data">
 			{% csrf_token %}
-			<h3>FindTargetsWeb</h3>
+			<h3>FindTargetsWeb 2.0</h3>
 			<h4>EXECUTION HAS STARTED. PLEASE WAIT FOR RESULTS IN YOUR EMAIL!</h4>
 		</form>
-        <a href="{% url 'index' %}">Home</a>
 	</div>
 {% endblock %}
