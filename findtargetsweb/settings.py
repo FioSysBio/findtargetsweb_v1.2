@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_COOKIE_SECURE = False
+
 
 # Application definition
 
@@ -79,10 +81,16 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'findtargetsweb',
         # 'USER': 'root',
-        'USER': 'ccbh4851',
+        'USER': 'acbm',
+        # 'USER': 'root',
+        # 'USER': 'ccbh4851',
+        # 'PASSWORD': 'local@123',
+        'PASSWORD': 'Procc@123',
         # 'PASSWORD': 'Root@123',
-        'PASSWORD': 'ccbh4851',
+        # 'PASSWORD': 'ccbh4851',
+        # 'HOST': '172.19.0.10',
         'HOST': 'localhost',
+        # 'PORT': '3310',
     }
 }
 
@@ -141,7 +149,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/path/to/django/debug.log',
+            'filename': 'log.log',
         },
     },
     'loggers': {
