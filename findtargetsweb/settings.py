@@ -88,7 +88,7 @@ DATABASES = {
         'PASSWORD': 'Procc@123',
         # 'PASSWORD': 'Root@123',
         # 'PASSWORD': 'ccbh4851',
-        # 'HOST': '172.19.0.10',
+        # 'HOST': '172.19.0.8',
         'HOST': 'localhost',
         # 'PORT': '3310',
     }
@@ -132,9 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = 'static/'
+STATIC_URL = '/findtargetsweb/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'findtargetsweb/static')
+    os.path.join(BASE_DIR, '/findtargetsweb/static')
 ]
 
 # Default primary key field type
