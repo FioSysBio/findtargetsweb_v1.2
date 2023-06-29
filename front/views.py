@@ -61,7 +61,7 @@ def index(request):
             del dict_return_full['file']
             cache.set('dict_return_full', dict_return_full)
 
-            return HttpResponseRedirect('/passo1/')
+            return HttpResponseRedirect('/findtargetsweb/passo1/')
             # return HttpResponseRedirect('FindTargetsWEB/passo1/')  # servidor
     else:
         request.session.flush()
@@ -98,7 +98,7 @@ def passo1(request):
                 t.start()
 
             dict_return_full.update(dict_return_form)
-            return HttpResponseRedirect('/passo2/')
+            return HttpResponseRedirect('/findtargetsweb/passo2/')
             # return HttpResponseRedirect('FindTargetsWEB/passo2/')  # servidor
 
     else:  # Aqui está entrando na pagina passo1.html
