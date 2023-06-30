@@ -81,15 +81,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'findtargetsweb',
         # 'USER': 'root',
-        # 'USER': 'acbm',
-        'USER': 'root',
+         'USER': 'acbm',
+        #'USER': 'root',
         # 'USER': 'ccbh4851',
-        'PASSWORD': 'local@123',
-        # 'PASSWORD': 'Procc@123',
+        #'PASSWORD': 'local@123',
+         'PASSWORD': 'Procc@123',
         # 'PASSWORD': 'Root@123',
         # 'PASSWORD': 'ccbh4851',
-        'HOST': '172.19.0.10',
-        # 'HOST': 'localhost',
+        #'HOST': '172.19.0.10',
+         'HOST': 'localhost',
         # 'PORT': '3310',
     }
 }
@@ -131,11 +131,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_URL = 'static/'
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'findtargetsweb/static')
+#]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'findtargetsweb/static')
 ]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
