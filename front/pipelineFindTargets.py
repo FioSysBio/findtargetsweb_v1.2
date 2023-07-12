@@ -586,7 +586,7 @@ class FindTargets:
                 sequence = re.sub(r"\n", r"", sequence)
                 
                 # executando o job que faz o blast
-                jobid = s.run(program="blastp", database="uniprotkb_reference_proteomes", sequence=sequence, stype="protein", email="gianninimail@gmail.com", alignments='1000')
+                jobid = s.run(program="blastp", database="uniprotkb_swissprot", sequence=sequence, stype="protein", email="findtargetweb@gmail.com", alignments='1000')
                 file_jobid.write("{0};{1}\n".format(uniprotid, jobid))
                 
                 time.sleep(1)
@@ -613,8 +613,8 @@ class FindTargets:
                 uniprotid = item.split(';')[0]
                 jobid = item.split(';')[1]
 
-                url_status_blast = "http://www.ebi.ac.uk/Tools/services/rest/ncbiblast/status/"
-                url_result_blast = "http://www.ebi.ac.uk/Tools/services/rest/ncbiblast/result/"
+                url_status_blast = "https://www.ebi.ac.uk/Tools/services/rest/ncbiblast/status/"
+                url_result_blast = "https://www.ebi.ac.uk/Tools/services/rest/ncbiblast/result/"
                 last_url_result_blast = "/xml"
 
                 start_time_first_req = time.time()
