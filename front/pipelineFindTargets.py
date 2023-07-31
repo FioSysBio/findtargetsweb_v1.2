@@ -692,7 +692,8 @@ class FindTargets:
 
                         #print(idPAO1)
                         # ###### TESTE ----- COMMENT ----- (SUBCELLULAR LOCATION) - deprecated - substituir por 'subcellular locations'
-                        foundID = u.search(idPAO1, columns='entry name, id, genes, pathway, comment(FUNCTION), comment(CATALYTIC ACTIVITY), database(PDB), database(PSEUDOCAP), subcellular locations, ec')
+                        foundID = u.search(idPAO1)
+                        # foundID = u.search(idPAO1, columns='entry name, id, genes, pathway, comment(FUNCTION), comment(CATALYTIC ACTIVITY), database(PDB), database(PSEUDOCAP), subcellular locations, ec')
                         foundIDResponse = ""
                         if isinstance(foundID, str):
                             if (foundID != ""):
@@ -723,11 +724,19 @@ class FindTargets:
                         #					splitForListFoundID[10], splitForListFoundID[11],
                         #        splitForListFoundID[12], splitForListFoundID[13], splitForListFoundID[16], splitForListFoundID[14]
                         #    ))
+                        # c10 = splitForListFoundID[10]
+                        # c11 = splitForListFoundID[11]
+                        # c12 = splitForListFoundID[12]
+                        # c13 = splitForListFoundID[13]
+                        # c14 = splitForListFoundID[14]
+
+                        string_resultante = ""
+                        for valor in splitForListFoundID:
+                            string_resultante += ";" + str(valor)
+
                         if float(percentSimilarHuman) < float(percentBlast): # so grava se o percentual de similaridade for menor do que com humanos
-                            fileResultBlast.write("{0};{1};{2};{3};{4};{5};{6};{7};{8};{9}\n".format(
-                                uniprotid, idPAO1, percentBlast, eValue,
-                                                                splitForListFoundID[10], splitForListFoundID[11],
-                                splitForListFoundID[12], splitForListFoundID[13], "   " , splitForListFoundID[14]
+                            fileResultBlast.write("{0};{1};{2};{3}{4}\n".format(
+                                uniprotid, idPAO1, percentBlast, eValue, string_resultante
                             ))
 
                         else: # Caso tenha hit com percent de humano maior, poe tudo zerado
